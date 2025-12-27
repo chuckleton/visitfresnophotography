@@ -41,7 +41,6 @@ wrangler.toml.local
 .pnpm-store/
 
 # OS files
-.DS_Store
 Thumbs.db
 
 # TypeScript cache
