@@ -1,0 +1,32 @@
+---
+const { entry } = Astro.props;
+const { slug, data } = entry;
+---
+
+<article class="card">
+  <a href={`/portfolio/${slug}`} style="text-decoration:none;">
+    <img
+      src={data.coverUrl}
+      alt={data.coverAlt}
+      loading="lazy"
+      decoding="async"
+    />
+    <div class="meta">
+      <div
+        style="display:flex; align-items:center; justify-content:space-between; gap:10px;"
+      >
+        <strong>{data.title}</strong>
+        <span class="badge">{data.category}</span>
+      </div>
+      {
+        (data.location || data.date) && (
+          <div class="small" style="margin-top:6px;">
+            {data.location ? data.location : ""}
+            {data.location && data.date ? " • " : ""}
+            {data.date ? data.date : ""}
+          </div>
+        )
+      }
+    </div>
+  </a>
+</article>

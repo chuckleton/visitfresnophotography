@@ -1,0 +1,8 @@
+---
+import PhotoCard from "./PhotoCard.astro";
+const { items } = Astro.props; // array of collection entries
+---
+
+<div class="grid cols-3">
+  {items.map((item) => <PhotoCard entry={item} />)}
+</div>

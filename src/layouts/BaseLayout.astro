@@ -1,0 +1,27 @@
+---
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+
+const { title, description } = Astro.props;
+const fullTitle = title ? `${title} • Visit Fresno Photography` : "Visit Fresno Photography";
+const desc = description ?? "Wildlife and adventure photography — ski mountaineering, climbing, mountain biking, and the quiet places in between.";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={desc} />
+    <meta name="theme-color" content="#0b0f14" />
+  </head>
+  <body>
+    <Nav />
+    <main class="container">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

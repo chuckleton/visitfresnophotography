@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import GalleryGrid from "../../components/GalleryGrid.astro";
+
+const all = await getCollection("portfolio");
+
+// Simple ordering: featured first, then newest by date if provided
+const sorted = [...all].sort((a, b) => {
+  if (a.data.featured !== b.data.featured) return a.data.featured ? -1 : 1;
+  return (b.data.date ?? "").localeCompare(a.data.date ?? "");
+});
+---
+
+<BaseLayout
+  title="Portfolio"
+  description="Wildlife and adventure photography gallery."
+>
+  <section class="panel" style="padding: 18px;">
+    <p class="kicker">Portfolio</p>
+    <h1 style="margin-top: 6px;">Work</h1>
+    <p class="small" style="max-width: 72ch; margin-top: 8px;">
+      Selected wildlife and human-powered adventure photography.
+    </p>
+  </section>
+
+  <div class="hr"></div>
+
+  <GalleryGrid items={sorted} />
+</BaseLayout>

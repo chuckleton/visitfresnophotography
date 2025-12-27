@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Prints"
+  description="Prints for sale — simple, high-quality, shipped to you."
+>
+  <section class="panel" style="padding: 18px;">
+    <p class="kicker">Prints</p>
+    <h1 style="margin-top: 6px;">Shop</h1>
+    <p class="small" style="max-width: 72ch; margin-top: 10px;">
+      Basic placeholder for now. Common next step: Stripe Checkout links per
+      print size, or a lightweight storefront integration.
+    </p>
+
+    <div class="hr"></div>
+
+    <div class="grid cols-2">
+      <div class="card">
+        <div class="meta">
+          <strong>Open Edition</strong>
+          <p class="small" style="margin-top: 6px;">
+            Metal • Fine art paper • Canvas
+          </p>
+          <a class="btn accent" href="#" style="margin-top: 10px;"
+            >Coming soon</a
+          >
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="meta">
+          <strong>Limited Edition</strong>
+          <p class="small" style="margin-top: 6px;">
+            Signed • Numbered • Certificate
+          </p>
+          <a class="btn accent" href="#" style="margin-top: 10px;"
+            >Coming soon</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

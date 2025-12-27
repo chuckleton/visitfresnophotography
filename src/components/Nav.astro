@@ -1,0 +1,39 @@
+---
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/prints", label: "Prints" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+];
+---
+
+<header class="container" style="padding-bottom: 8px;">
+  <div
+    class="panel"
+    style="padding: 14px 16px; display:flex; align-items:center; justify-content:space-between; gap:14px;"
+  >
+    <a href="/" style="text-decoration:none;">
+      <div style="display:flex; flex-direction:column; gap:2px;">
+        <span class="kicker">Visit Fresno</span>
+        <strong style="font-size:1.05rem;">Photography</strong>
+      </div>
+    </a>
+
+    <nav
+      style="display:flex; flex-wrap:wrap; gap:10px; justify-content:flex-end;"
+    >
+      {
+        links.map((l) => (
+          <a
+            class="small"
+            href={l.href}
+            style="padding:6px 8px; border-radius:999px; border:1px solid transparent;"
+          >
+            {l.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>
