@@ -4,7 +4,7 @@ const portfolio = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
-    category: z.enum(["Wildlife", "Ski Mountaineering", "Landscapes"]),
+    category: z.enum(["Wildlife", "Ski Mountaineering", "Landscapes", "Surfing"]),
     location: z.string().optional(),
     date: z.string().optional(),
     coverUrl: z.string(), // AWS URL (S3/CloudFront)
