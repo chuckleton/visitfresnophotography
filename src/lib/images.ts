@@ -14,3 +14,4 @@ export function imageUrl(slug: string, width: number) {
 export function srcset(slug: string, widths: readonly number[]) {
   return widths.map((w) => `${imageUrl(slug, w)} ${w}w`).join(", ");
 }
+//
