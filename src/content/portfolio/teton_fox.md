@@ -1,9 +1,9 @@
 ---
 title: Teton Fox
 category: Wildlife
-location: Iceland
-date: "2025-06-20"
-coverUrl: https://images.visitfresnophotography.com/960/20250419-_4190810.jpg
+location: Wyoming
+date: "2025-04-19"
+imageSlug: 20250419-_4190810
 coverAlt: "Teton Fox"
 featured: true
 ---

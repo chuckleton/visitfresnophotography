@@ -1,13 +1,18 @@
 ---
+import { imageUrl, srcset, THUMB_WIDTHS, GALLERY_SIZES } from "../lib/images";
 const { entry } = Astro.props;
 const { slug, data } = entry;
+
+const defaultThumb = 720;
 ---
 
 <article class="card">
   <a href={`/portfolio/${slug}`} style="text-decoration:none;">
     <div class="thumb">
       <img
-        src={data.coverUrl}
+        src={imageUrl(data.imageSlug, defaultThumb)}
+        srcset={srcset(data.imageSlug, THUMB_WIDTHS)}
+        sizes={GALLERY_SIZES}
         alt={data.coverAlt}
         loading="lazy"
         decoding="async"

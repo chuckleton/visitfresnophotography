@@ -1,6 +1,8 @@
 {
     "dependencies": {
         "@astrojs/cloudflare": "^12.6.12",
+        "dotenv": "^17.2.3",
+        "sharp": "^0.34.5",
         "wrangler": "^4.54.0"
     },
     "name": "visitfresnophotography",
@@ -16,6 +18,8 @@
         "start": "astro build && wrangler pages dev ./dist",
         "build": "astro build",
         "preview": "astro preview",
-        "astro": "astro"
+        "astro": "astro",
+        "images:build": "bun run scripts/build-images.ts",
+        "images:publish": "bun run scripts/publish-images.ts"
     }
 }
