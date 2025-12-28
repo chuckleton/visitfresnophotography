@@ -1,6 +1,7 @@
 {
     "dependencies": {
-        "@astrojs/cloudflare": "^12.6.12"
+        "@astrojs/cloudflare": "^12.6.12",
+        "wrangler": "^4.54.0"
     },
     "name": "visitfresnophotography",
     "private": true,
@@ -11,8 +12,8 @@
         "typescript": "^5"
     },
     "scripts": {
-        "dev": "astro dev",
-        "start": "astro dev",
+        "dev": "astro build && wrangler pages dev ./dist",
+        "start": "astro build && wrangler pages dev ./dist",
         "build": "astro build",
         "preview": "astro preview",
         "astro": "astro"
