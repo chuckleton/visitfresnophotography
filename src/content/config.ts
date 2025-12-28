@@ -4,7 +4,7 @@ const portfolio = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
-    category: z.enum(["Wildlife", "Ski Mountaineering", "Climbing", "Mountain Biking", "Adventure"]),
+    category: z.enum(["Wildlife", "Ski Mountaineering", "Climbing", "Landscapes", "Adventure"]),
     location: z.string().optional(),
     date: z.string().optional(),
 
