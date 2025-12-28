@@ -8,19 +8,18 @@ const featured = all.filter((x) => x.data.featured).slice(0, 6);
 ---
 
 <BaseLayout title="Home">
-  <section class="panel" style="padding: 20px 18px;">
-    <p class="kicker">Photos from About</p>
-    <h1 style="font-size: clamp(2rem, 4vw, 3rem); margin-top: 8px;">
-      Visit Fresno Photography
-    </h1>
-    <p class="small" style="max-width: 68ch; margin-top: 10px;">
-      Various pics
+  <section class="box">
+    <h1 style="margin-top: 0;">Visit Fresno Photography</h1>
+    <p class="small" style="max-width: 72ch;">
+      Wildlife and human-powered adventure — ski mountaineering, climbing,
+      mountain biking — photographed with a focus on quiet light and real
+      places.
     </p>
 
-    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top: 14px;">
-      <a class="btn accent" href="/portfolio">View Portfolio →</a>
-      <a class="btn" href="/prints">Shop Prints</a>
-    </div>
+    <p class="small">
+      <a href="/portfolio">View Portfolio</a> &nbsp;•&nbsp;
+      <a href="/prints">Shop Prints</a>
+    </p>
   </section>
 
   <div class="hr"></div>

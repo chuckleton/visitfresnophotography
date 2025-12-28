@@ -8,32 +8,28 @@ const links = [
 ];
 ---
 
-<header class="container" style="padding-bottom: 8px;">
+<header class="container">
   <div
-    class="panel"
-    style="padding: 14px 16px; display:flex; align-items:center; justify-content:space-between; gap:14px;"
+    style="display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:10px;"
   >
-    <a href="/" style="text-decoration:none;">
-      <div style="display:flex; flex-direction:column; gap:2px;">
-        <span class="kicker">Visit Fresno</span>
-        <strong style="font-size:1.05rem;">Photography</strong>
+    <div>
+      <div style="font-size: 1.05rem; font-weight: 700;">
+        Visit Fresno Photography
       </div>
-    </a>
+      <div class="small">Wildlife &amp; human-powered adventure</div>
+    </div>
 
-    <nav
-      style="display:flex; flex-wrap:wrap; gap:10px; justify-content:flex-end;"
-    >
+    <nav class="small" style="white-space: nowrap;">
       {
-        links.map((l) => (
-          <a
-            class="small"
-            href={l.href}
-            style="padding:6px 8px; border-radius:999px; border:1px solid transparent;"
-          >
-            {l.label}
-          </a>
+        links.map((l, i) => (
+          <>
+            <a href={l.href}>{l.label}</a>
+            {i < links.length - 1 ? <span> | </span> : null}
+          </>
         ))
       }
     </nav>
   </div>
+
+  <hr class="hr" />
 </header>
