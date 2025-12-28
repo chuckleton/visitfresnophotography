@@ -89,11 +89,14 @@
     .grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
   }
 
+  /* Card becomes a simple vertical layout */
   .card {
     border: 1px solid var(--rule);
     border-radius: var(--radius);
     overflow: hidden;
     background: #fff;
+    display: flex;
+    flex-direction: column;
   }
 
   .card img {
@@ -104,6 +107,21 @@
 
   .card .meta {
     padding: 10px 12px 12px 12px;
+  }
+
+  .thumb {
+    width: 100%;
+    aspect-ratio: 3 / 2;   /* change to 4/3 or 1/1 if you prefer */
+    overflow: hidden;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .thumb img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;     /* crops instead of squishing */
+    object-position: center;
   }
 
   .badge {
@@ -124,4 +142,28 @@
 
   @media (min-width: 1200px) {
     :root { --pad: 10px; }
+  }
+
+  .meta {
+    padding: 10px 12px 12px 12px;
+    height: 64px;          /* adjust to taste */
+    display: grid;
+    grid-template-rows: auto 1fr; /* title row + subtitle row */
+  }
+
+  .titleRow {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .sub {
+    align-self: end;       /* pins subtitle to bottom of meta area */
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  .placeholder {
+    visibility: hidden;
   }
