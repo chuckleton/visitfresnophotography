@@ -5,8 +5,8 @@
     --muted: #333333;
     --rule: #000000;
 
-    --max: 980px;
-    --pad: 18px;
+    --max: 1180px;
+    --pad: 12px; /* updated from 18px */
 
     /* slight modern touch */
     --radius: 6px;
@@ -120,4 +120,8 @@
     font-size: 0.95rem;
     color: var(--muted);
     margin-top: 6px;
+  }
+
+  @media (min-width: 1200px) {
+    :root { --pad: 10px; }
   }
